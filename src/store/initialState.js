@@ -1,6 +1,10 @@
 const initialState = {
     activeTab: "user",
-    users: []
+    users: [],
+    activeUser: null,
+    posts: [],
+    todos: [],
+    albums: []
 };
 
 export default initialState;

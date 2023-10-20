@@ -9,7 +9,7 @@ const NavBar = () => {
     const tab = useSelector(state => state.activeTab);
     
     return (
-        <nav>
+        <nav className={style.nav_bar}>
             <button 
                 onClick={() => {dispatch(changeTab("user"))}}
                 className={tab === "user" ? style.activeTab : style.tab}
@@ -20,7 +20,7 @@ const NavBar = () => {
             >User Posts</button>
             <button 
                 onClick={() => {dispatch(changeTab("todos"))}}
-                className={tab === "todos" ? style.activeTab : style.tab}
+                className={tab === "todos" ? style.activeTab : style.tab} 
             >Todos</button>
             <button 
                 onClick={() => {dispatch(changeTab("albums"))}}

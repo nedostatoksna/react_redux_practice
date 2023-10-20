@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchUsers } from "../../store/actionCreators";
+import { chooseUser, fetchUsers } from "../../store/actionCreators";
 
 const UserList = () => {
 
@@ -18,7 +18,7 @@ const UserList = () => {
         <ul>
             {
                 users.map(user => (
-                    <li key={user.id}>
+                    <li key={user.id} onClick={() => dispatch(chooseUser(user.id))}>
                         {user.username}
                     </li>
                 ))
