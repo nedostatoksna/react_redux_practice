@@ -1,0 +1,15 @@
+.todos_wrapper {
+    width: 550px;
+    padding: 50px 10px;
+}
+.todo {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+.header {
+    font-size: 30px;
+    color:#994b51;
+    padding-left: 15px;
+    padding-bottom: 8px;
+}

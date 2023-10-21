@@ -2,6 +2,8 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchPosts } from "../../store/actionCreators";
 import Post from "./Post";
+import style from "./UserPosts.module.css";
+import LoadingSpinner from "../../ui/LoadingSpinner";
 
 const UserPosts = () => {
 
@@ -15,10 +17,10 @@ const UserPosts = () => {
     }, [dispatch, userId]);
 
     if (!posts.length) {
-        return <h1>Loading...</h1>
+        return <LoadingSpinner />
     } 
     return (
-        <ul>
+        <ul className={style.posts_wrapper}>
             {
                 posts.map(post => (
                     <Post post={post} key={post.id}/>

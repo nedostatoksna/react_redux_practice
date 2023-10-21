@@ -1,8 +1,14 @@
-.posts_wrapper {
+.albums_wrapper {
     width: 550px;
     padding: 50px 10px;
 }
-.comments_btn {
+.photo_wrapper {
+    width: 300px;
+}
+li  {
+    list-style-type: none;
+}
+.photos_btn {
     width: 530px;
     height: 25px;
     background: white;
@@ -10,10 +16,7 @@
     border: 1px solid #994b51;
     cursor: pointer;
 }
-.green {
-    color: #009688;
-}
-.comments_btn:hover {
+.photos_btn:hover {
     background: #994b51;
     color: white;
     opacity: 70%;

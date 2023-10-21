@@ -2,6 +2,8 @@ import { useDispatch, useSelector } from "react-redux";
 import Todo from "./Todo";
 import { useEffect } from "react";
 import { fetchTodos } from "../../store/actionCreators";
+import style from "./UserTodos.module.css";
+import LoadingSpinner from "../../ui/LoadingSpinner";
 
 const UserTodos = () => {
 
@@ -14,11 +16,11 @@ const UserTodos = () => {
     }, [dispatch, userId]);
     
     if (!todos.length) {
-        return <h1>Loading...</h1>
+        return <LoadingSpinner />
     } 
     return (
         <>
-            <ul>
+            <ul className={style.todos_wrapper}>
                 {
                     todos.map(todo => (
                         <Todo todo={todo} key={todo.id} />

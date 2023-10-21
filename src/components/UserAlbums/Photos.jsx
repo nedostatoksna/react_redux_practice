@@ -1,5 +1,6 @@
 import React from "react";
 import Photo from "./Photo";
+import style from "./UserAlbums.module.css";
 
 const Photos = ({ album }) => {
 
@@ -7,7 +8,7 @@ const Photos = ({ album }) => {
         <>
             {
                 album.photos ? (
-                    <ul>
+                    <ul className={style.album_content_wrapper}>
                         {
                             album.photos.map(photo => (
                                 <Photo photo={photo} key={photo.id} />

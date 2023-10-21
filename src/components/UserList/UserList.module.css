@@ -1,0 +1,26 @@
+.user_list_wrapper {
+    padding: 15px 10px;
+    min-width: 300px;
+}
+.user_list {
+    padding: 0px 15px;
+}
+.header {
+    font-size: 30px;
+    color:#994b51;
+    padding-left: 15px;
+    padding-bottom: 8px;
+}
+.user {
+    border:  1px solid rgba(0,0,0,.125);
+    padding: 8px 16px;
+    text-align: start;
+}
+.active_user {
+    border:  1px solid rgba(0,0,0,.125);
+    padding: 8px 16px;
+    text-align: start;
+    background: #009688; 
+    color: white;
+    opacity: 70%;
+}

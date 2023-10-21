@@ -18,12 +18,15 @@ function App() {
     : <UserAlbums />;
 
   return (
-    <div>
+    <>
       <NavBar />
-      <UserList />
-      {activeUser !== null ? ActiveTabContent : <p>Choose the user</p> }
+      <div className="main_screen">
+        <UserList />
+        {activeUser !== null ? ActiveTabContent : <p className="choose_user">Choose the user!</p> }
 
-    </div>
+      </div>
+    </>
+    
   );
 }
 

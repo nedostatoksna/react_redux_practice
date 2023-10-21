@@ -1,7 +1,22 @@
 .tab {
-    text-decoration: none;
-
+    padding: 10px 30px;
+    background: white;
+    border: none;
+    cursor: pointer;
 }
 .activeTab {
-    text-decoration: underline;
+    cursor: pointer;
+    padding: 10px 30px;
+    background: #009688; 
+    border: none;
+    color: white;
+    opacity: 70%;
+}
+.nav_wrapper {
+    width: 100%;
+}
+.nav_bar {
+    margin: auto;
+    display: flex;
+    justify-content: center
 }

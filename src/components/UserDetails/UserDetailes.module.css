@@ -1,0 +1,26 @@
+.user_card {
+    width: 550px;
+    padding: 50px 10px;
+}
+.name {
+    font-weight: 400;
+    padding: 6px 3px;
+}
+.company, .website, .phone, .email {
+    font-weight: 400;
+    font-size: 18px;
+    padding: 6px 3px;
+}
+.city {
+    font-weight: 400;
+    font-size: 30px;
+}
+.green {
+    color: #009688;
+}
+.header {
+    font-size: 30px;
+    color:#994b51;
+    padding-left: 15px;
+    padding-bottom: 8px;
+}

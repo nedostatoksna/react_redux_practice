@@ -9,24 +9,26 @@ const NavBar = () => {
     const tab = useSelector(state => state.activeTab);
     
     return (
-        <nav className={style.nav_bar}>
-            <button 
-                onClick={() => {dispatch(changeTab("user"))}}
-                className={tab === "user" ? style.activeTab : style.tab}
-            >User Details</button>
-            <button 
-                onClick={() => {dispatch(changeTab("posts"))}}
-                className={tab === "posts" ? style.activeTab : style.tab}
-            >User Posts</button>
-            <button 
-                onClick={() => {dispatch(changeTab("todos"))}}
-                className={tab === "todos" ? style.activeTab : style.tab} 
-            >Todos</button>
-            <button 
-                onClick={() => {dispatch(changeTab("albums"))}}
-                className={tab === "albums" ? style.activeTab : style.tab}
-            >Albums</button>
-        </nav>
+        <div className={style.nav_wrapper}>
+            <nav className={style.nav_bar}>
+                <button 
+                    onClick={() => {dispatch(changeTab("user"))}}
+                    className={tab === "user" ? style.activeTab : style.tab}
+                >User Details</button>
+                <button 
+                    onClick={() => {dispatch(changeTab("posts"))}}
+                    className={tab === "posts" ? style.activeTab : style.tab}
+                >User Posts</button>
+                <button 
+                    onClick={() => {dispatch(changeTab("todos"))}}
+                    className={tab === "todos" ? style.activeTab : style.tab} 
+                >Todos</button>
+                <button 
+                    onClick={() => {dispatch(changeTab("albums"))}}
+                    className={tab === "albums" ? style.activeTab : style.tab}
+                >Albums</button>
+            </nav>
+        </div>
     )
 };
 

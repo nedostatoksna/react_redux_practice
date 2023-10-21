@@ -2,6 +2,8 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchAlbums } from "../../store/actionCreators";
 import Album from "./Album";
+import style from "./UserAlbums.module.css";
+import LoadingSpinner from "../../ui/LoadingSpinner";
 
 const UserAlbums = () => {
     const albums = useSelector(state => state.albums);
@@ -13,10 +15,10 @@ const UserAlbums = () => {
     }, [dispatch, userId]);
 
     if (!albums.length) {
-        return <h1>Loading...</h1>
+        return <LoadingSpinner />
     } 
     return (
-        <ul>
+        <ul className={style.albums_wrapper}>
             {
                 albums.map(album => (
                     <Album album={album} key={album.id}/>
